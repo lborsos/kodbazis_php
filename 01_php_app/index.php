@@ -6,7 +6,7 @@ $sourceCurrency = $_GET['mirol'] ?? 'USD';
 $targetCurrency = $_GET['mire'] ?? 'HUF';
 
 // 2. Mellékhatás (Átváltási ráta adatok beolvasása)
-$content = file_get_contents("https://api.exchangeratesapi.io/latest?base=" . $sourceCurrency);
+$content = file_get_contents("https://kodbazis.hu/api/exchangerates?base=" . $sourceCurrency);
 $decodedContent = json_decode($content, true);
 
 // 3. Számítás
