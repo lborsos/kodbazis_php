@@ -1,0 +1,12 @@
+# Futásban lévő Docker konténerek leállítása:
+docker stop $(docker ps -a -q)
+
+# Docker konténerek eltávolítása (opcionális):
+docker rm -f $(docker ps -a -q)
+
+# Fejlesztői környezet elindítása:
+docker-compose up
+
+
+# Ha fut egyéb olyan program, (pl: XAMPP), ami lefoglalhatja a portokat,
+akkor azt is le kell állítani!
